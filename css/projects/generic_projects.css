@@ -4,6 +4,8 @@ body, h1, h2
 	padding : 0px;
 }
 
+/***** HEADER *****/
+
 h1
 {	
 	font-size : 20px;
@@ -46,10 +48,5 @@ header:hover
 	
 	height : 60px;
 }
- 
-#copy
-{
-	position : relative;
-	z-index : 1;
-}
+
 

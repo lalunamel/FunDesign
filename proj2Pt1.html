@@ -9,11 +9,13 @@
 		<link rel = StyleSheet href = "css/projects/project_design.css" type = "text/css" media = screen> 
 		<link rel = StyleSheet href = "fonts/cantarell/cantarell.css" type = "text/css" media = screen> 
 		<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+		<script type = "text/javascript" src = "javascript/design.js"></script>
 	</head>
 	<body>
 		<header>
 			<span id = "headerText">
-				<h1>Fundamentals of 2D Design</h1>
+				<h1>Project 1 Part 1</h1>
 				<h2>Doop doop doop Meow Meow New Lines </h2>
 			</span>
 			<span id = "assignments">
@@ -36,7 +38,21 @@
 		</header>
 		<div id="copy">
 			<div id="format">
-				<div id="col1" class="col"></div><div id="col2" class="col"></div><div id="col3" class="col"></div><div id="col4" class="col"></div>
+				<div class="col"><div id="inner1" class="inner"></div></div><div class="col"><div id="inner2" class="inner"></div></div><div class="col"><div id="inner3" class="inner"></div></div><div class="col"><div id="inner4" class="inner"></div></div>
+			</div>
+			<div id="resetBar">
+				<span class="resetButton">
+					<a href="javascript:$('#inner1').css('left', '0px');">Reset</a>
+				</span>
+				<span class="resetButton">
+					<a href="javascript:$('#inner2').css('left', '0px');">Reset</a>
+				</span>
+				<span class="resetButton">
+					<a href="javascript:$('#inner3').css('left', '0px');">Reset</a>
+				</span>
+				<span class="resetButton">
+					<a href="javascript:$('#inner4').css('left', '0px');">Reset</a>
+				</span>
 			</div>
 		</div>
 	</body>
