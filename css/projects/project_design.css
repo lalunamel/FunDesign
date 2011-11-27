@@ -69,6 +69,7 @@ a
 	margin : 0px;
 	padding : 0px;
 	overflow : hidden;
+	position : relative;
 }
 
 .inner
@@ -109,7 +110,7 @@ a
 	height : 1.5em;
 	background-color : rgb(0, 0, 0);
 	background-color : rgba(0, 0, 0, .4);
-	margin : 0px auto auto auto;
+	margin : 20px auto auto auto;
 }
 
 .styleButton
