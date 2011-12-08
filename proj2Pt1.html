@@ -16,7 +16,7 @@
 	<body>
 		<header>
 			<span id = "headerText">
-				<h1>Project 1 Part 4</h1>
+				<h1>Project 3 Part 1</h1>
 				<h2>Doop doop doop Meow Meow New Lines </h2>
 			</span>
 			<span id = "assignments">
@@ -38,38 +38,55 @@
 			<div id="formatContainer">
 				<div id="format">
 					<div class="col" id="col1">
-						<div id="black1" class="black bar"><div class ='closeButton'></div></div>
+						<canvas width="1000" height="1500" id="can1"></canvas>
 					</div><div class="col" id="col2">
-						<div id="black2" class="black bar"><div class ='closeButton'></div></div>
+						<canvas width="1000" height="1500" id="can2"></canvas>
 					</div><div class="col" id="col3">
-						<div id="black3" class="black bar"><div class ='closeButton'></div></div>
+						<canvas width="1000" height="1500" id="can3"></canvas>
 					</div><div class="col" id="col4">
-						<div id="black4" class="black bar"><div class ='closeButton'></div></div>
+						<canvas width="1000" height="1500" id="can4"></canvas>
 					</div>
 				</div>
 			</div>
 			<div id="styleBar">
 				<span class="styleButton">
-					<a href="javascript:createGray();">+1 Gray</a>
+					<form id="form1">
+						<input id="input1" type="text" value="z" maxlength="1">
+					</form>
+				</span>
+				<span class="styleButton">
+					<form id="form2">
+						<input id="input2" type="text" value="q" maxlength="1">
+					</form>
+				</span>
+				<span class="styleButton">
+					<form id="form3">
+						<input id="input3" type="text" value="r" maxlength="1">
+					</form>
+				</span>
+				<span class="styleButton">
+					<form id="form4">
+						<input id="input4" type="text" value="d" maxlength="1">
+					</form>
 				</span>
 			</div>
 			<div id="resetBar">
 				<span class="resetButton">
-					<a href="javascript:reset('#col1', 4);">Reset</a>
+					<a href="javascript:reset('#col1', 5);">Reset</a>
 				</span>
 				<span class="resetButton">
-					<a href="javascript:reset('#col2', 4);">Reset</a>
+					<a href="javascript:reset('#col2', 5);">Reset</a>
 				</span>
 				<span class="resetButton">
-					<a href="javascript:reset('#col3', 4);">Reset</a>
+					<a href="javascript:reset('#col3', 5);">Reset</a>
 				</span>
 				<span class="resetButton">
-					<a href="javascript:reset('#col4', 4);">Reset</a>
+					<a href="javascript:reset('#col4', 5);">Reset</a>
 				</span>
 			</div>
 		</div>
 	</body>
 	<script type="text/javascript">
-		init(4);
+		init(5);
 	</script>
 </html>
