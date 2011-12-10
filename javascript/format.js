@@ -1,13 +1,35 @@
-function disableEnter() 
-{
-  return !(window.event && window.event.keyCode == 13); 
+function changeCallbackWithImage(numElement){
+	text = document.getElementById("input" + numElement).value;
+	urlText = text;
+	if(text.length > 7 && text.substring(0,7) != "http://") 
+		urlText = "http://" + urlText;
+	img = new Image();
+	img.onload = function() {
+		canvas = document.getElementById("can" + numElement);
+		updateCanvas(canvas, ""); // clear and reposition the canvas
+		$(canvas).css({'top': '0px', 'left': '0px'});
+		canvas.getContext("2d").drawImage(this, 0 , 0);
+	};
+	img.onerror = function() {
+		if(text.length < 1) // Special case, when there is nothing in the input
+		{
+			updateCanvas(document.getElementById("can" + numElement), "");
+		}
+		else // When the link doesnt work and the text is not blank
+		{
+			updateCanvas(document.getElementById("can" + numElement), text.substring(0,1));
+		}
+	};
+	img.src = urlText;
 }
 
-function changeCallback(numElement){
-				updateCanvas(document.getElementById("can" + numElement), 
-					document.getElementById("input" + numElement).value);
+
+function changeCallback(numElement)
+{
+	updateCanvas(document.getElementById("can" + numElement), 
+		document.getElementById("input" + numElement).value);
 }
-			
+
 function updateCanvas(canvas, newLetter)
 {
 	var ctx = canvas.getContext('2d');
@@ -82,7 +104,7 @@ function createGray() {
 }	
 
 function init(projectNum) {
-	if(projectNum != 5)
+	if(projectNum < 5)
 	{
 		if(projectNum == 1)
 		{
@@ -108,7 +130,7 @@ function init(projectNum) {
 			handles: 'n,s',
 		});
 	}
-	else
+	else if(projectNum == 5)
 	{
 		$("canvas").draggable();
 		
@@ -116,6 +138,17 @@ function init(projectNum) {
 		$("#form2").change(function(){changeCallback(2)});
 		$("#form3").change(function(){changeCallback(3)});
 		$("#form4").change(function(){changeCallback(4)});
+		
+		$("form").change();
+	}
+	else
+	{
+		$("canvas").draggable();
+		
+		$("#form1").change(function(){changeCallbackWithImage(1)});
+		$("#form2").change(function(){changeCallbackWithImage(2)});
+		$("#form3").change(function(){changeCallbackWithImage(3)});
+		$("#form4").change(function(){changeCallbackWithImage(4)});
 		
 		$("form").change();
 	}

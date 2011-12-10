@@ -7,6 +7,7 @@
 		<link rel="shortcut icon" href="images/favicon.ico">
 		<link rel = StyleSheet href = "css/projects/generic_projects.css" type = "text/css" media = screen> 
 		<link rel = StyleSheet href = "css/projects/project_design.css" type = "text/css" media = screen> 
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/>
 		<link rel = StyleSheet href = "fonts/cantarell/cantarell.css" type = "text/css" media = screen> 
 		<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
@@ -15,8 +16,8 @@
 	<body>
 		<header>
 			<span id = "headerText">
-				<h1>Project 1 Part 2 - tension, rhythem &amp; balance</h1>
-				<h2>Move the black bars horizontally and vertically to create an interesting composition </h2>
+				<h1>Project 3 Part 2 - Variations On the Letterform &amp; Image</h1>
+				<h2>Create an interesting composition using the 26 letterforms and one image by pasting a link into the text box</h2>
 			</span>
 			<span id = "assignments">
 				<a href="proj1Pt1.html">
@@ -40,36 +41,55 @@
 			<div id="formatContainer">
 				<div id="format">
 					<div class="col" id="col1">
-						<div id="black1" class="black bar"><div class ='closeButton'></div></div>
+						<canvas width="1000" height="1500" id="can1"></canvas>
 					</div><div class="col" id="col2">
-						<div id="black2" class="black bar"><div class ='closeButton'></div></div>
+						<canvas width="1000" height="1500" id="can2"></canvas>
 					</div><div class="col" id="col3">
-						<div id="black3" class="black bar"><div class ='closeButton'></div></div>
+						<canvas width="1000" height="1500" id="can3"></canvas>
 					</div><div class="col" id="col4">
-						<div id="black4" class="black bar"><div class ='closeButton'></div></div>
+						<canvas width="1000" height="1500" id="can4"></canvas>
 					</div>
 				</div>
 			</div>
-			<span>
-				<a href="javascript:">Save</a>
-			</span>
+			<div id="styleBar">
+				<span class="styleButton">
+					<form id="form1">
+						<input id="input1" type="text" onkeypress="return event.keyCode!=13" value="r">
+					</form>
+				</span>
+				<span class="styleButton">
+					<form id="form2">
+						<input id="input2" type="text" onkeypress="return event.keyCode!=13" value="r">
+					</form>
+				</span>
+				<span class="styleButton">
+					<form id="form3">
+						<input id="input3" type="text" onkeypress="return event.keyCode!=13" value="r">
+					</form>
+				</span>
+				<span class="styleButton">
+					<form id="form4">
+						<input id="input4" type="text" onkeypress="return event.keyCode!=13" value="r">
+					</form>
+				</span>
+			</div>
 			<div id="resetBar">
 				<span class="resetButton">
-					<a href="javascript:reset('#col1', 2);">Reset</a>
+					<a href="javascript:reset('#col1', 6);">Reset</a>
 				</span>
 				<span class="resetButton">
-					<a href="javascript:reset('#col2', 2);">Reset</a>
+					<a href="javascript:reset('#col2', 6);">Reset</a>
 				</span>
 				<span class="resetButton">
-					<a href="javascript:reset('#col3', 2);">Reset</a>
+					<a href="javascript:reset('#col3', 6);">Reset</a>
 				</span>
 				<span class="resetButton">
-					<a href="javascript:reset('#col4', 2);">Reset</a>
+					<a href="javascript:reset('#col4', 6);">Reset</a>
 				</span>
 			</div>
 		</div>
 	</body>
 	<script type="text/javascript">
-		init(2);
+		init(6);
 	</script>
 </html>
