@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>2D Design</title>
+		<meta name="description" content="Project">
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel = StyleSheet href = "css/projects/generic_projects.css" type = "text/css" media = screen> 
+		<link rel = StyleSheet href = "css/projects/project_design.css" type = "text/css" media = screen> 
+		<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css"/>
+		<link rel = StyleSheet href = "fonts/cantarell/cantarell.css" type = "text/css" media = screen> 
+		<script type = "text/javascript" src = "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+		<script type = "text/javascript" src = "javascript/format.js"></script>
+	</head>
+	<body>
+		<header>
+			<span id = "headerText">
+				<h1>Project 3 Part 1 - Variations On the Letterform &amp; Image</h1>
+				<h2>Create an interesting composition using the 26 letterforms by entering a letter into the text box</h2>
+			</span>
+			<span id = "assignments">
+				<a href="proj1Pt1.html">
+					<img src="images/projects/design/Proj2Pt1.png" alt="Start project 1 part 1" class = "assignmentImage"/>
+				</a>
+				<a href="proj1Pt2.html">
+					<img src="images/projects/design/Proj2Pt2.png" alt="Start project 1 part 2" class = "assignmentImage"/>
+				</a>
+				<a href="proj1Pt3.html">
+					<img src="images/projects/design/Proj2Pt3.png" alt="Start project 1 part 3" class = "assignmentImage"/>
+				</a>
+				<a href="proj2Pt1.html">
+					<img src="images/projects/design/Proj3Pt1.png" alt="Start project 2 part 1" class = "assignmentImage"/>
+				</a>
+				<a href="proj2Pt2.html">
+					<img src="images/projects/design/Proj3Pt2.png" alt="Start project 2 part 2" class = "assignmentImage"/>
+				</a>
+			</span>
+		</header>
+		<div id="copy">
+			<div id="formatContainer">
+				<div id="format">
+					<div class="col" id="col1">
+						<canvas width="1000" height="1500" id="can1"></canvas>
+					</div><div class="col" id="col2">
+						<canvas width="1000" height="1500" id="can2"></canvas>
+					</div><div class="col" id="col3">
+						<canvas width="1000" height="1500" id="can3"></canvas>
+					</div><div class="col" id="col4">
+						<canvas width="1000" height="1500" id="can4"></canvas>
+					</div>
+				</div>
+			</div>
+			<div id="styleBar">
+				<span class="styleButton">
+					<form id="form1">
+						<input id="input1" type="text" value="z" maxlength="1">
+					</form>
+				</span>
+				<span class="styleButton">
+					<form id="form2">
+						<input id="input2" type="text" value="q" maxlength="1">
+					</form>
+				</span>
+				<span class="styleButton">
+					<form id="form3">
+						<input id="input3" type="text" value="r" maxlength="1">
+					</form>
+				</span>
+				<span class="styleButton">
+					<form id="form4">
+						<input id="input4" type="text" value="d" maxlength="1">
+					</form>
+				</span>
+			</div>
+			<div id="resetBar">
+				<span class="resetButton">
+					<a href="javascript:reset('#col1', 5);">Reset</a>
+				</span>
+				<span class="resetButton">
+					<a href="javascript:reset('#col2', 5);">Reset</a>
+				</span>
+				<span class="resetButton">
+					<a href="javascript:reset('#col3', 5);">Reset</a>
+				</span>
+				<span class="resetButton">
+					<a href="javascript:reset('#col4', 5);">Reset</a>
+				</span>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		init(5);
+	</script>
+</html>
